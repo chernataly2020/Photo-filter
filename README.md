@@ -1,5 +1,5 @@
 # Photo-filter
 
-School project
+School project (RS School)
 
 https://chernataly2020.github.io/Photo-filter/
