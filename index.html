@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="assets/favicon.ico" rel="shortcut icon" />
+  <link href="https://fonts.gstatic.com" rel="preconnect" />
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;800&display=swap" rel="stylesheet" />
+  <link href="style.css" rel="stylesheet" />
+  <title>photo-filter</title>
+</head>
+<body id="body">
+  <header class="header">
+    <div>
+      <img id="logo1" src="./assets/png/painting.png" alt="painting">
+    </div>
+    <div><h1 class="header-title">Photo-filter</h1></div>
+    <div><img id="logo2" src="./assets/png/paintbrush.png" alt="brush"></div>
+    <div class="btn-container-scr">
+      <div class="btn-scr">
+        <button class="fullscreen openfullscreen"></button>
+      </div>
+      <div class="btn-scr">
+        <button class="fon" onclick="body.classList.toggle('bg2')">&#127799;</button>
+      </div>
+    </div>
+  </div>
+  </header>
+
+  <main class="main">
+    <div class="filters">
+      <label>
+        Blur:
+        <input name="blur" id="input-blur" data-sizing="px" type="range" min="0" max="10" value="0"/>
+        <output name="result" id="output-blur">0px</output>
+      </label>
+      <label>
+        Invert:
+        <input name="invert" id="input-invert" data-sizing="%" type="range" min="0" max="100" value="0" />
+        <output name="result" id="output-invert">0%</output>
+      </label>
+      <label>
+        Sepia:
+        <input name="sepia" id="input-sepia" data-sizing="%" type="range" min="0" max="100" value="0" />
+        <output name="result" id="output-sepia">0%</output>
+      </label>
+      <label>
+        Saturate:
+        <input name="saturate" id="input-saturate" data-sizing="%" type="range" min="0" max="200" value="100" />
+        <output name="result" id="output-saturate">100%</output>
+      </label>
+      <label>
+        Hue rotate:
+        <input name="hue" id="input-hue" data-sizing="deg" type="range" min="0" max="360" value="0" />
+        <output name="result" id="output-hue">0deg</output>
+      </label>
+      <label>
+        Color:
+        <input id="base" name="base" type="color" value="#ab8bc0"/>
+      </label>
+    </div>
+    <div class="editor">
+      <div class="btn-container">
+        <button class="btn btn-reset">Reset</button>
+        <button class="btn btn-next">Next picture</button>
+        <label class="btn btn-load" for="btnInput">
+          Load picture
+          <input class="btn-load--input" 
+                 id="btnInput"  
+                 name="upload" 
+                 accept="image/jpeg,image/png,image/gif" 
+                 multiple type="file" 
+                 placeholder="Load picture" />
+        </label>
+        <button class="btn btn-save">Save picture</button>
+      </div>
+      <div class=".image-container">
+        <img src="./assets/img/fon4.png" alt="image" class="image"/>
+        <canvas class="canvas"></canvas>
+      </div>        
+    </div>
+  </main>
+  <footer class="footer">
+    <div class="footer-container">
+      <a class="github" href="https://github.com/chernataly2020" target="_blank" rel="noopener noreferrer">chernataly2020</a>
+      <a class="rss" href="https://rs.school/js/" target="_blank" rel="noopener">
+        <span class="rss-year">'21</span>
+      </a>
+    </div>
+  </footer>
+  <script src="classes.js"></script>
+  <script src="./js/script.js"></script>
+</body>
+</html>
